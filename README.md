@@ -89,15 +89,15 @@ At production launch:
 2. If moving to a real domain, replace `stunning-paprenjak-a672f9.netlify.app`
    everywhere it appears: canonicals in each page head, the JSON-LD block in
    `index.html`, `robots.txt`, and `sitemap.xml`.
-3. Replace the fictitious phone (215) 555-0148 and verify the
-   hello@carecollaborative.com inbox is real and monitored.
+3. Replace the fictitious phone (215) 555-0148. Emails are live:
+   Liz@CC-Philly.com and Nancy@CC-Philly.com (confirm both are monitored).
 4. Connect the form to a privacy-reviewed backend (see below) — a generic
    form service may not be appropriate for health-adjacent inquiries.
 5. Complete the team bios, then submit the sitemap in Search Console.
 
 ## Before launch — replace the placeholders
 
-- Phone `(215) 555-0148` and email `hello@carecollaborative.com` (in every page footer + contact).
+- Phone `(215) 555-0148` (in every page footer + contact). Emails are real: Liz@CC-Philly.com, Nancy@CC-Philly.com.
 - Team bios and headshots on `about.html`.
 - Service-area wording ("Philadelphia & the Main Line").
 - Add real photography, testimonials, and any licensing/credentials to display.
