@@ -614,10 +614,9 @@ blockquote { margin: 0; }
   :root { --section-y: 4.25rem; }
 
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-art { order: -1; min-height: 250px; }
-  .hero-art img { width: min(78%, 320px); }
-  .blob.b1 { width: 220px; height: 220px; }
-  .blob.b2 { width: 165px; height: 165px; }
+  /* When the hero stacks, the outline mark lands on top of same-hue blobs and
+     goes muddy — and the header already carries the logo. Headline leads. */
+  .hero-art { display: none; }
 
   .split { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
