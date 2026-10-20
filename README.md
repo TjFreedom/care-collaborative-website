@@ -1,7 +1,8 @@
 # Care Collaborative — Website Starter
 
-A dependency-free, static website starter built on the Care Collaborative brand
-(Woven Current logo, soft coastal palette, Cormorant Garamond + Karla).
+A dependency-free, static website built on the finalized Care Collaborative brand
+(petal mark in sage + clay, warm cream palette, Gelica display type, tagline
+"Navigating care together.").
 Plain HTML, CSS, and vanilla JS — no build step, no framework. Open it, edit it,
 host it anywhere.
 
@@ -28,11 +29,15 @@ care-collaborative-website/
 ├── css/styles.css     Design tokens + all styles (start here to retheme)
 ├── js/main.js         Mobile nav, contact-form stub, footer year
 └── assets/
-    ├── logo-mark.svg           Woven Current mark (color)
-    ├── logo-mark-reversed.svg  Mark for dark backgrounds (footer)
-    ├── logo-lockup.svg         Full stacked lockup (mark + wordmark)
-    └── favicon.svg             One-color mark
+    ├── logo-mark.svg           Petal mark, color (= CC-Logo-Icon_Color)
+    ├── logo-mark-reversed.svg  White mark for dark backgrounds (= CC-Logo-Icon_White)
+    ├── logo-lockup.svg         Horizontal lockup + tagline (= CC-Logo-Main-Tag_Color)
+    ├── logo-badge.svg          Circular badge (= CC-Logo-Badge_Color)
+    └── favicon.svg             Color petal mark (= CC-Logo-Icon_Color)
 ```
+
+The full logo package (Main/Badge/Icon × Color/Black/White in SVG, PNG, and EPS)
+lives in the "CareCollaborative Logo" zip; the files above are the web subset.
 
 The header and footer markup is duplicated in each page (standard for a no-build
 static site). If you edit navigation or footer, update all five pages, or move to
@@ -45,16 +50,24 @@ All colors, fonts, and spacing live as CSS variables at the top of
 
 | Token | Value | Use |
 |------|-------|-----|
-| `--slate` | `#3E5C6E` | Wordmark, headings, primary buttons |
-| `--harbor` | `#2E4757` | Footer, reversed sections |
-| `--euc` / `--euc-deep` | `#8FA89A` / `#5E7E6C` | Accents; deep version for links/small text |
-| `--sea` | `#A8C5BC` | Soft backgrounds, tints |
-| `--sand` | `#C9B8A3` | Warm accents |
-| `--ivory` | `#F5F0E6` | Page background |
-| `--ink` | `#34474F` | Body text |
+| `--green` | `#638269` | Brand green: wordmark, headings, primary buttons |
+| `--green-deep` | `#4C6654` | Links + small text (contrast-safe, derived) |
+| `--forest` | `#3E5345` | Footer, reversed sections (derived) |
+| `--sage` | `#B1C0B4` | Soft green accents, tints |
+| `--sage-mid` | `#75947C` | Mid sage from the logo mark |
+| `--blush` | `#E7D1C8` | Soft warm tint |
+| `--clay` | `#CEA391` | Warm accent from the logo mark |
+| `--cream` | `#FBEEE5` | Page background |
+| `--ink` | `#3B463E` | Body text (derived) |
 
-Fonts load from Google Fonts (Cormorant Garamond, Karla). To self-host for speed
-or offline use, download the font files and replace the `<link>` in each page.
+The five core colors come from the CareCollaborative Quick Guide; `--green-deep`,
+`--forest`, and `--ink` are darker derivatives added for text contrast (WCAG AA).
+
+The brand display font is **Gelica (Adobe Fonts)**. The site currently loads
+Fraunces from Google Fonts as the closest free stand-in, with Karla for body/UI
+text. To switch to real Gelica: create an Adobe Fonts web project, add its embed
+`<link>` to each page's `<head>`, and set `--font-display: "gelica", serif` in
+`css/styles.css`.
 
 ## Making the contact form live
 
