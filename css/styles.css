@@ -131,6 +131,19 @@ blockquote { margin: 0; }
 
 .center { text-align: center; margin-inline: auto; }
 
+/* Headings that exist for structure/assistive tech, not visual design */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .muted { color: var(--ink-soft); }
 
 .eyebrow {
@@ -274,9 +287,11 @@ blockquote { margin: 0; }
 .btn:hover { transform: translateY(-1px); }
 .btn:active { transform: translateY(0); }
 
+/* Button text is normal-size, so backgrounds/text use --green-deep (≥4.5:1
+   against white and cream per WCAG 1.4.3); --green stays for large display text. */
 .btn-primary {
-  background: var(--green);
-  border-color: var(--green);
+  background: var(--green-deep);
+  border-color: var(--green-deep);
   color: #fff;
   box-shadow: var(--shadow-sm);
 }
@@ -285,14 +300,14 @@ blockquote { margin: 0; }
 .btn-ghost {
   background: transparent;
   border-color: rgba(99, 130, 105,.35);
-  color: var(--green);
+  color: var(--green-deep);
 }
-.btn-ghost:hover { background: rgba(177, 192, 180,.22); border-color: var(--green); color: var(--green); }
+.btn-ghost:hover { background: rgba(177, 192, 180,.22); border-color: var(--green-deep); color: var(--green-deep); }
 
 .btn-light {
   background: var(--cream);
   border-color: var(--cream);
-  color: var(--green);
+  color: var(--green-deep);
 }
 .btn-light:hover { background: #fff; border-color: #fff; color: var(--forest); }
 
@@ -504,7 +519,14 @@ blockquote { margin: 0; }
   transition: border-color .2s var(--ease), box-shadow .2s var(--ease), background-color .2s var(--ease);
 }
 .field textarea { resize: vertical; min-height: 8rem; }
-.field select { appearance: none; background-image: none; cursor: pointer; }
+.field select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 2.6rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%234C6654' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right .95rem center;
+}
 
 .field input:hover,
 .field select:hover,
@@ -625,6 +647,11 @@ blockquote { margin: 0; }
 
 @media (max-width: 780px) {
   .nav-toggle { display: flex; }
+
+  /* No-JS fallback: main.js adds .js to <html>; without it the toggle is
+     useless, so hide it and show the menu as a static stacked list. */
+  html:not(.js) .nav-toggle { display: none; }
+  html:not(.js) .nav-links { display: flex; position: static; box-shadow: none; }
 
   .nav-links {
     position: absolute;

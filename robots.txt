@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stunning-paprenjak-a672f9.netlify.app/sitemap.xml

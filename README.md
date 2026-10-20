@@ -79,6 +79,22 @@ The form in `contact.html` is a front-end stub. To receive real messages, pick o
   `data-live="true"`. The stub handler in `js/main.js` steps aside once
   `data-live="true"`.
 
+## Launch gates (from the Oct 2026 site audit)
+
+The site currently carries `<meta name="robots" content="noindex">` on every
+page because the phone number is fictitious and the bios are placeholders.
+At production launch:
+
+1. Remove the noindex meta from all five pages (marked with a `PREVIEW` comment).
+2. If moving to a real domain, replace `stunning-paprenjak-a672f9.netlify.app`
+   everywhere it appears: canonicals in each page head, the JSON-LD block in
+   `index.html`, `robots.txt`, and `sitemap.xml`.
+3. Replace the fictitious phone (215) 555-0148 and verify the
+   hello@carecollaborative.com inbox is real and monitored.
+4. Connect the form to a privacy-reviewed backend (see below) — a generic
+   form service may not be appropriate for health-adjacent inquiries.
+5. Complete the team bios, then submit the sitemap in Search Console.
+
 ## Before launch — replace the placeholders
 
 - Phone `(215) 555-0148` and email `hello@carecollaborative.com` (in every page footer + contact).

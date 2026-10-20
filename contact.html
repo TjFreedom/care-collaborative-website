@@ -3,8 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact — Care Collaborative</title>
-  <meta name="description" content="Start with a conversation. Contact Care Collaborative for nurse and OT-led care navigation for older adults in Philadelphia.">
+  <title>Request a Consultation | Care Collaborative Philadelphia</title>
+  <meta name="description" content="Contact Care Collaborative about care navigation for an older adult in Philadelphia. Request a first conversation and learn what happens next.">
+  <!-- PREVIEW: remove this noindex on every page at production launch -->
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://stunning-paprenjak-a672f9.netlify.app/contact">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,19 +18,19 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html">
-        <img src="assets/logo-mark.svg" alt="Care Collaborative">
+      <a class="brand" href="/">
+        <img src="assets/logo-mark.svg" alt="Care Collaborative" width="46" height="46">
         <span class="name">Care Collaborative</span>
       </a>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="services.html">Our Care</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="approach.html">Our Approach</a></li>
-        <li><a href="contact.html" aria-current="page">Contact</a></li>
-        <li class="nav-cta"><a class="btn btn-primary" href="contact.html">Request a consult</a></li>
+        <li><a href="/services">Our Care</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/approach">Our Approach</a></li>
+        <li><a href="/contact" aria-current="page">Contact</a></li>
+        <li class="nav-cta"><a class="btn btn-primary" href="/contact">Request a consult</a></li>
       </ul>
     </div>
   </header>
@@ -45,6 +48,7 @@
       <div class="container split">
         <!-- FORM -->
         <div>
+          <h2 class="visually-hidden">Send us a message</h2>
           <!-- To go live: set data-live="true" and add a real action, e.g.
                <form ... action="https://formspree.io/f/yourid" method="POST"> -->
           <form class="form" id="contact-form" data-live="false" action="#" method="POST" novalidate>
@@ -76,12 +80,14 @@
             </div>
             <button class="btn btn-primary" type="submit">Send message</button>
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-            <p class="form-note">Prefer to talk? Call <a href="tel:+12155550148">(215) 555-0148</a>. We never share your information.</p>
+            <p class="form-note">Please don&rsquo;t include medical records, diagnoses, or urgent medical needs in this form &mdash; we&rsquo;ll cover the details together on the phone.</p>
+            <p class="form-note">Prefer to talk? Call <a href="tel:+12155550148">(215) 555-0148</a>. We use what you share only to respond to your inquiry.</p>
           </form>
         </div>
 
         <!-- INFO -->
         <div>
+          <h2 class="visually-hidden">Other ways to reach us</h2>
           <div class="card">
             <h3>Reach us directly</h3>
             <ul class="info" style="margin-top:1rem">
@@ -103,17 +109,17 @@
   <footer class="site-footer footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="assets/logo-mark-reversed.svg" alt="Care Collaborative">
+        <img src="assets/logo-mark-reversed.svg" alt="Care Collaborative" width="54" height="54">
         <div class="name">Care Collaborative</div>
         <p style="margin-top:.6rem;max-width:34ch">Nurse and occupational-therapy led care navigation for older adults and families across Philadelphia.</p>
       </div>
       <div>
         <h4>Explore</h4>
         <ul>
-          <li><a href="services.html">Our Care</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="approach.html">Our Approach</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/services">Our Care</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/approach">Our Approach</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
       <div>

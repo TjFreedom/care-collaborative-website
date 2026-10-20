@@ -6,6 +6,10 @@
 (function () {
   'use strict';
 
+  // Signals CSS that JS is available; without it the mobile menu renders
+  // as a static list instead of a toggle-driven dropdown.
+  document.documentElement.classList.add('js');
+
   /* ---------------------------------------------------------------------
      Mobile navigation
      --------------------------------------------------------------------- */
@@ -81,11 +85,6 @@
         ' — this form isn’t connected yet, so nothing was sent. ' +
         'Please call or email us in the meantime.'
       );
-
-      // Surface the message for whoever wires up the real endpoint.
-      if (window.console && console.info) {
-        console.info('[contact form] stub submission:', Object.fromEntries(new FormData(form)));
-      }
     });
   }
 
